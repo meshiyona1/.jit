@@ -1,0 +1,37 @@
+owners:
+  default: null
+name: My plan
+author: Jit
+items:
+  - name: Ensure your API is secure
+    uses: jitsecurity-controls/jit-plans/items/runtime/item-api-security.yml@latest
+  - name: Scan code for vulnerabilities
+    uses: >-
+      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
+  - name: Enable automatic security scanning of your container images
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
+  - name: Scan code dependencies for vulnerabilities
+    uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
+  - name: Scan IaC for static misconfigurations
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
+  - name: Ensure IAM Roles are Least Privileged
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-least-privileged-iam.yml@latest
+  - name: Require MFA for SCM
+    uses: >-
+      jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
+  - name: Scan infrastructure runtime misconfigurations
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
+  - name: Scan code for hard-coded secrets
+    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
+  - name: Run a Web Application Scanner
+    uses: >-
+      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
+level: beginner
+version: 0.1
+references:
+  - https://www.jit.io
+tags: []
