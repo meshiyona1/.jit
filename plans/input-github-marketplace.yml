@@ -64,8 +64,15 @@ has_patching_system:
 #    regions:
 #      - "us-east-1"
 applications:
- - url: "https://platform.jit.io/login"
-   application_name: "my-app"
-   swagger_file_paths:
-     - "path1"
-     - "path2"
+  - type: "api endpoints"
+    application_name: "Jit plan service api"
+    swagger_file_paths: 
+      - "https://api.dev.jitdev.io/plan/plans"
+    headers:
+      - Authorization: "Bearer "
+  - type: "web application"
+    url: "https://platform.jit.io/login"
+    application_name: "Jit platform"
+    headers:
+      - Authorization: "Bearer "
+      - Tenant: "e3c15f03-31ee-4e06-9b5a-570f075eddff"
