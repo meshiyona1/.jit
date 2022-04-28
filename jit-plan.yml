@@ -1,7 +1,12 @@
+name: My plan
+level: beginner
+author: Jit
+version: 0.1
 owners:
   default: null
-name: My plan
-author: Jit
+references:
+  - https://www.jit.io
+tags: []
 items:
   - name: Ensure your API is secure
     uses: jitsecurity-controls/jit-plans/items/runtime/item-api-security.yml@latest
@@ -33,8 +38,3 @@ items:
   - name: Run a web application scanner
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-level: beginner
-version: 0.1
-references:
-  - https://www.jit.io
-tags: []
