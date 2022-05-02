@@ -1,6 +1,7 @@
 applications:
 - application_name: plan service
   headers:
+  - Tenant: "meshi"
   swagger_file_paths:
   - https://api.dev.jitdev.io/plan/plans
   type: api
